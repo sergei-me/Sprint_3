@@ -104,15 +104,15 @@ class OnlineSalesRegisterCollector:
             date_and_time.append(f'{i}{func(now)}')
         return date_and_time
 
-receipt = OnlineSalesRegisterCollector()
-receipt.add_item_to_cheque('кола')
-receipt.add_item_to_cheque('чипсы')
-receipt.add_item_to_cheque('молоко')
-print(receipt.name_items)
-# receipt.delete_item_from_check('кола2')
+# receipt = OnlineSalesRegisterCollector()
+# receipt.add_item_to_cheque('кола')
+# receipt.add_item_to_cheque('чипсы')
+# receipt.add_item_to_cheque('молоко')
 # print(receipt.name_items)
-receipt.check_amount
-print(receipt.twenty_percent_tax_calculation())
-print(receipt.total_tax())
-print(receipt.get_telephone_number(1234567890))
-print(receipt.get_date_and_time())
+# # receipt.delete_item_from_check('кола2')
+# # print(receipt.name_items)
+# receipt.check_amount
+# print(receipt.twenty_percent_tax_calculation())
+# print(receipt.total_tax())
+# print(receipt.get_telephone_number(1234567890))
+# print(receipt.get_date_and_time())

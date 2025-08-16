@@ -59,7 +59,10 @@ class OnlineSalesRegisterCollector:
         total = []
         filtered_items = filter(lambda item: self.__tax_rate[item] == 20, self.name_items)
         for item in filtered_items:
-            total.append(self.__item_price[item])
+            if self.number_items > 10:
+                total.append(self.__item_price[item] * 0,9)
+            else:
+                total.append(self.__item_price[item])
         twenty_percent_tax = map(lambda item: item * 0.2, total)
         return sum(twenty_percent_tax)
 
@@ -69,7 +72,10 @@ class OnlineSalesRegisterCollector:
         total = []
         filtered_items = filter(lambda item: self.__tax_rate[item] == 10, self.name_items)
         for item in filtered_items:
-            total.append(self.__item_price[item])
+            if self.number_items > 10:
+                total.append(self.__item_price[item] * 0,9)
+            else:
+                total.append(self.__item_price[item])
         ten_percent_tax = map(lambda item: item * 0.1, total)
         return sum(ten_percent_tax)
 
